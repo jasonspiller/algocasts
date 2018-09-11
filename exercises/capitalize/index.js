@@ -7,6 +7,19 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {}
+function capitalize(str) {
+
+  // SOLUTION 1
+  let arrWords = [];
+
+  for (let word of str.split(' ')) {
+    arrWords.push( word[0].toUpperCase() + word.slice(1) )
+  }
+
+  return arrWords.join(' ');
+
+}
+
+console.log(capitalize('testing test'))
 
 module.exports = capitalize;
